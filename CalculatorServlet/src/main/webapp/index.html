@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  div {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  input[type="number"],
+  select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #004999;
+  }
+	
+</style>
+</head>
+<body>
+	<div>
+		<h2>Calculator</h2>
+		<form action="CalculatorServlet" method="post">
+			<label>Entre the number1:</label>
+			<input type="number" name="num1" placeholder="Entre the number" required>
+		    <label>Entre the number2:</label>
+			<input type="number" name="num2" placeholder="Entre the number" required>
+			<label>select operation:</label>
+			<select name="operation">
+				<option value="add">Addition</option>
+				<option value="sub">subtraction</option>
+				<option value="multi">Multiplication</option>
+				<option value="divi">division</option>
+			</select>
+			<button type="submit">Calculate</button>
+			
+		</form>
+	</div>
+
+</body>
+</html>
